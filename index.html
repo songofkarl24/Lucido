@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project Lucido | 시도하고 싶은 마음에 물꼬를 틉니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8FBFF; --ink:#13294B; --sub:#4A5E7A; --line:#D6E6F5;
+  --point:#FFD23F; --point-ink:#13294B; --green:#1E78C8; --card:#FFFFFF;
+  --glow1:rgba(255,214,64,.5); --glow2:rgba(120,190,255,.38);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1B30; --ink:#F3F8FF; --sub:#B3C4DB; --line:#243A5A; --card:#15294A; --green:#8CCBFF; --glow1:rgba(255,210,63,.2); --glow2:rgba(110,180,255,.2); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{--bg:#0E1B30; --ink:#F3F8FF; --sub:#B3C4DB; --line:#243A5A; --card:#15294A; --green:#8CCBFF; --glow1:rgba(255,210,63,.2); --glow2:rgba(110,180,255,.2); color-scheme:dark;}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);
+  background:radial-gradient(900px 560px at 6% -8%,var(--glow1),transparent 70%),radial-gradient(820px 520px at 100% 0%,var(--glow2),transparent 70%),var(--bg);
+  font-family:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  line-height:1.8;word-break:keep-all}
+main{max-width:1120px;margin:0 auto;padding:96px 64px 80px}
+h1,h2{font-family:"Jua","Noto Sans KR",sans-serif;font-weight:400;margin:0}
+h1{font-size:clamp(56px,9vw,120px);line-height:1.02;letter-spacing:-.02em}
+.slogan{font-size:28px;font-weight:500;margin:28px 0 0}
+.hl{background:linear-gradient(transparent 58%,var(--point) 58%);padding:0 3px;color:inherit}
+.keys{display:flex;gap:10px;list-style:none;padding:0;margin:36px 0 0}
+.keys li{border:1.5px solid var(--green);color:var(--green);border-radius:999px;padding:3px 18px;font-size:15px;font-weight:500}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:72px;margin-top:88px;padding-top:56px;border-top:1.5px solid var(--line)}
+h2{font-size:30px;margin-bottom:18px}
+p{margin:0 0 16px;color:var(--sub);font-size:17px;max-width:34em}
+p strong{color:var(--ink);font-weight:700}
+.who{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.who li{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 22px;font-size:17px}
+.contact{margin-top:88px;padding:48px 56px;background:var(--card);border:1.5px solid var(--line);border-radius:20px;
+  display:flex;align-items:center;justify-content:space-between;gap:40px}
+.contact h2{margin-bottom:6px}.contact p{margin:0}
+.btns{display:flex;gap:14px;flex-shrink:0}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:17px;padding:15px 28px;border-radius:12px;background:var(--point);color:var(--point-ink)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn:hover{filter:brightness(.95)}
+.btn:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+footer{margin-top:48px;font-size:14px;color:var(--sub)}
+@media (max-width:860px){
+  main{padding:64px 24px}
+  .grid{grid-template-columns:1fr;gap:48px;margin-top:56px}
+  .contact{flex-direction:column;align-items:flex-start;padding:32px 24px;margin-top:56px}
+  .keys{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Project<br>Lucido</h1>
+    <p class="slogan"><span class="hl">시도하고 싶은 마음에</span> 물꼬를 틉니다</p>
+    <ul class="keys" aria-label="키워드"><li>발견</li><li>표현</li><li>나눔</li><li>재미</li><li>시도</li></ul>
+  </header>
+
+  <div class="grid">
+    <section>
+      <h2>하는 일, 그리고 이유</h2>
+      <p><strong>새로운 걸 해 보고 싶은 사람이 부담 없이 시작하도록, 같이 배우고 만드는 자리를 열어.</strong></p>
+      <p>취미 얘기만 나누는 커피챗, 서로의 덕질을 권하는 모임, 작게 시작하는 방법까지. 정답을 가르치기보다 "같이 해 보자"고 권해.</p>
+      <p>"해야 한다"는 마음 대신, 딴길로 새는 재미와 의미를 발견하는 사람이 많아지는 동네를 만들고 싶어서야.</p>
+    </section>
+    <section>
+      <h2>이런 사람이면 좋겠어</h2>
+      <ul class="who">
+        <li>새로운 걸 시도해 보고 싶은 20~30대</li>
+        <li>"해야 한다"는 생각에 딴길로 새지 못하고 망설이는 사람</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>같이 해 보자</h2>
+      <p>궁금한 게 있으면 편하게 말 걸어 줘.</p>
+    </div>
+    <div class="btns">
+      <a class="btn" href="https://www.instagram.com/odenhobler" target="_blank" rel="noopener">인스타그램</a>
+      <a class="btn alt" href="mailto:odenhobler@naver.com">이메일 보내기</a>
+    </div>
+  </section>
+  <footer>© Project Lucido</footer>
+</main>
+</body>
+</html>
